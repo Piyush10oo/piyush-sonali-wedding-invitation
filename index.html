@@ -218,6 +218,29 @@ body{font-family:'Cormorant Garamond',serif;background:#fbf7f0}
 .names span{font:400 clamp(26px,6vw,34px) 'Great Vibes',cursive;color:#b6203a}
 .firm{display:inline-block;margin-top:10px;padding:12px 28px;border:1px solid #c28b3a;border-radius:14px;background:#fff8e8e6;
   font:700 clamp(14px,3.8vw,19px) 'Cinzel',serif;letter-spacing:.14em;color:#7a1426;box-shadow:0 8px 24px -10px #5c0f1466}
+/* ---------- MOBILE-FRIENDLY EVENT CARDS ---------- */
+body{overflow-x:hidden;-webkit-text-size-adjust:100%}
+.glass{margin-top:var(--mm,70px);margin-left:0;margin-right:0}              /* phones */
+@media (min-width:700px){
+  .glass{margin-top:var(--mt);margin-left:var(--mlr);margin-right:var(--mlr)} /* tablet / desktop = your values */
+}
+@media (max-width:699px){
+  #events{padding:56px 12px 64px}
+  .cards{gap:36px;margin-top:36px}
+  .ev{min-height:480px;padding:16px 10px 22px;border-radius:22px}
+  .glass{padding:18px 12px;border-radius:22px}
+  .glass .logo{width:40px;height:40px}
+  .glass h3{font-size:10px;letter-spacing:.14em}
+  .glass .l{font-size:14px}
+  .glass hr{margin:12px 0}
+  .glass h2{font-size:clamp(17px,5.4vw,24px);letter-spacing:.08em}
+  .glass .pill{font-size:11px;padding:7px 14px;max-width:100%;text-align:center;line-height:1.4}
+  .times{max-width:100%;padding:10px 14px;font-size:14px}
+  .times p{gap:8px;flex-wrap:wrap}
+  .times b{text-align:right}
+  .where{font-size:12px}
+  .couple{width:min(200px,54vw);margin-top:18px}
+}
 </style>
 </head>
 <body>
@@ -436,13 +459,13 @@ const PLACES={
 };
 const mapsLink=p=>p.link||("https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(p.address));
 const EVENTS=[
- {k:"haldi",  loc:"res", bg:"g-haldi-bg.png",  pic:"haldi.png", art:"🌼", mt:96,mlr:130, tag:"#SunMeetsSky", when:"A MORNING", line:"Filled with love, laughter and turmeric.",
+ {k:"haldi",  loc:"res", bg:"g-haldi-bg.png",  pic:"haldi.png", art:"🌼", mt:96,mlr:130,mm:80, tag:"#SunMeetsSky", when:"A MORNING", line:"Filled with love, laughter and turmeric.",
   name:"HALDI CEREMONY", time:"3rd December 2026 | 10:00 AM", c:"#b45309", pill:"#92400e", pbg:"#f59e0b1a", pbd:"#d9770650"},
- {k:"mehndi", loc:"res", bg:"g-mehndi-bg.png", pic:"mehndi.png", art:"🤲", mt:130,mlr:125, tag:"#MehndiHaiRachneWali", when:"AN EVENING", line:"Filled with vibrant hues, joyful moments and the fragrance of henna.",
+ {k:"mehndi", loc:"res", bg:"g-mehndi-bg.png", pic:"mehndi.png", art:"🤲", mt:130,mlr:125,mm:28, tag:"#MehndiHaiRachneWali", when:"AN EVENING", line:"Filled with vibrant hues, joyful moments and the fragrance of henna.",
   name:"MEHNDI CEREMONY", time:"3rd December 2026 | 8:00 PM", c:"#065f46", pill:"#065f46", pbg:"#10b9811a", pbd:"#05966950"},
- {k:"sangeet",loc:"res", bg:"g-sangeet-bg.png",pic:"sangeet.png", art:"🎶", mt:130,mlr:145, dk:1, tag:"#YeShaamShandaar", when:"AN EVENING", line:"Where melodies meet memories and hearts dance with joy.",
+ {k:"sangeet",loc:"res", bg:"g-sangeet-bg.png",pic:"sangeet.png", art:"🎶", mt:130,mlr:145, mm:70,dk:1, tag:"#YeShaamShandaar", when:"AN EVENING", line:"Where melodies meet memories and hearts dance with joy.",
   name:"SANGEET CELEBRATION", time:"4th December 2026 | 6:00 PM", c:"#fde68a", title:"#47296b", pill:"#47296b", pbg:"#0003", pbd:"#e8cfa840",wc:"#47296b"},
- {k:"wedding",loc:"venue", bg:"g-wedding-bg.png",pic:"wedding.png", art:"💍", mt:250,mlr:130, dk:1,  when:"A SACRED CELEBRATION", line:"As two hearts, two families and two journeys become one.",
+ {k:"wedding",loc:"venue", bg:"g-wedding-bg.png",pic:"wedding.png", art:"💍", mt:250,mlr:130, mm:90,dk:1,  when:"A SACRED CELEBRATION", line:"As two hearts, two families and two journeys become one.",
   name:"WEDDING CEREMONY", date:"5th December 2026", c:"#7f1d1d", title:"#7f1d1d", rows:[["✦ Baraat","6:00 PM"],["✦ Varmala","8:00 PM"],["✦ Phere","Taaron Ki Chhaon Mein"]]}
 ];
 const R=(n,f)=>Array.from({length:n},(_,i)=>f(i)).join("");
@@ -456,7 +479,7 @@ $("cards").innerHTML=EVENTS.map(e=>`
  <article class="ev ${e.k}">
   <img class="bgimg" src="images/${e.bg}" alt="" onerror="this.remove()">
   <div class="fx">${FX[e.k]()}</div>
-  <div class="glass ${e.dk?"dk":""}" style="margin-top:${e.mt}px;margin-left:${e.mlr}px;margin-right:${e.mlr}px;color:${e.c}">
+  <div class="glass ${e.dk?"dk":""}" style="--mt:${e.mt}px;--mlr:${e.mlr}px;--mm:${e.mm}px;color:${e.c}">
     <img class="logo" src="images/PSlogo.png" alt="Monogram" onerror="this.remove()">
 
     <h3 style="opacity:.85">PLEASE JOIN US FOR ${e.when}</h3>
