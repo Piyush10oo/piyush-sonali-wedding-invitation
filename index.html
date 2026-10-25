@@ -128,13 +128,13 @@ body{font-family:'Cormorant Garamond',serif;background:#fbf7f0}
 .glass{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;padding:22px 16px;border-radius:26px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
   background:#ffffff66;border:1px solid #ffffff55;box-shadow:0 20px 50px -20px #5c0f1455}
 .glass.dk{background:#ffffff26;border-color:#ffffff26}
-.glass .logo{width:46px;height:46px;object-fit:contain;margin-bottom:6px;border-radius:50%}
+.glass .logo{width:60px;height:60px;object-fit:contain;margin-bottom:6px;border-radius:50%}
 .glass .tag{font:italic 600 18px 'Cormorant Garamond',serif;letter-spacing:.05em}
 .glass h3{font:600 11px 'Cinzel',serif;letter-spacing:.2em;margin-top:8px;text-transform:uppercase}
-.glass .l{font-style:italic;font-size:15px;margin-top:4px}
+.glass .l{font-style:italic;font-size:20px;margin-top:4px}
 .glass hr{width:96px;border:0;height:1px;background:#e8cfa899;margin:16px 0}
 .glass h2{font:700 clamp(22px,5.5vw,30px) 'Cinzel',serif;letter-spacing:.15em}
-.glass .pill{margin-top:14px;padding:8px 22px;border-radius:999px;font:600 20px 'Cinzel',serif;letter-spacing:.05em;border:1px solid;box-shadow:0 6px 20px -8px #0003}
+.glass .pill{margin-top:14px;padding:8px 22px;border-radius:999px;font:600 30px 'Cinzel',serif;letter-spacing:.05em;border:1px solid;box-shadow:0 6px 20px -8px #0003}
 .glass .dt{margin-top:8px;font:600 12px 'Cinzel',serif;letter-spacing:.12em;text-transform:uppercase}
 .times{width:100%;max-width:290px;margin-top:14px;padding:12px 22px;border-radius:16px;background:#fff8e8e6;border:1px solid #c28b3a;color:#5c0f14;text-align:left;font-size:20px;box-shadow:0 6px 18px -8px #5c0f1466}
 .times b{color:#7f1d1d}
@@ -733,7 +733,7 @@ const PLACES = {
     label: "WEDDING VENUE",
     title: "Maharaja Aggarsain Bhawan",
     when: "Baraat · Varmala · Rituals  |  5th December 2026",
-    address: "Near Govt. College Ground",
+    address: "Near Govt. College Ground, Hisar",
     side: "(Big Lawn )",
     link: ""
   }
@@ -794,7 +794,7 @@ const EVENTS = [
     picture: "sangeet.png",
     emoji: "🎶",
     desktopTop: 130,
-    desktopSide: 145,
+    desktopSide: 135,
     mobileTop: 70,
     darkCard: true,
     hashtag: "#YeShaamShandaar",
@@ -939,7 +939,7 @@ function createEventCard(event) {
     : `At ${place?.title || ""}`;
 
   const eventDate = event.date
-    ? `<p class="dt" style="color:#5c0f14;font-size:14px;font-weight:700;text-shadow:0 1px 0 #ffffff99">${event.date}</p>`
+    ? `<p class="dt" style="color:#5c0f14;font-size:20px;font-weight:700;text-shadow:0 1px 0 #ffffff99">${event.date}</p>`
     : "";
 
   const eventTime = event.time
