@@ -84,7 +84,7 @@ body{font-family:'Cormorant Garamond',serif;background:#fbf7f0}
 .verse{margin-top:14px;padding:14px 16px;border:1.5px solid #e0c48c;border-radius:16px;background:#fffaf0f2;box-shadow:0 8px 24px #5c0f1422}
 .verse .hi{font:700 15px/1.7 'Tiro Devanagari Hindi',serif}
 .verse small{display:block;margin-top:8px;font-style:italic;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#a0364f}
-.inv{margin-top:18px;font-size:13px;color:#5c0f14cc;max-width:300px}
+.inv{margin-top:18px;font-size:30px;color:#5c0f14cc;max-width:300px}
 .nm{font:400 clamp(66px,17vw,92px)/1 'Great Vibes',cursive;color:#b6203a;margin-top:4px}
 .par{font-size:11.5px;color:#4a2a2acc}.par em{display:block;font-size:10px;opacity:.7}
 .weds{font:400 28px 'Great Vibes',cursive;color:#7a1426;margin:4px 0}
@@ -195,7 +195,7 @@ body{font-family:'Cormorant Garamond',serif;background:#fbf7f0}
 .where{display:inline-block;margin-top:12px;font:600 12px 'Cinzel',serif;letter-spacing:.1em;text-decoration:none;color:inherit;padding-bottom:2px;border-bottom:1px dashed currentColor}
 .where:hover{opacity:.75}
 .place{margin-top:52px}
-.place .lab{font:600 12px 'Cinzel',serif;letter-spacing:.25em;color:#a0364f}
+.place .lab{font:600 15px 'Cinzel',serif;letter-spacing:.25em;color:#a0364f}
 .place h3{font:400 clamp(36px,8vw,50px) 'Great Vibes',cursive;color:#7a1426;margin-top:4px}
 .place h4{font:100 clamp(30px,4vw,50px) 'Great Vibes',cursive;color:#7a1426;margin-top:4px}
 .place .when{font-style:italic;font-size:17px;color:#4a2a2acc;margin-top:2px}
@@ -241,6 +241,61 @@ body{overflow-x:hidden;-webkit-text-size-adjust:100%}
   .where{font-size:12px}
   .couple{width:min(200px,54vw);margin-top:18px}
 }
+
+/* ---------- WELCOME PAGE: clearer text ---------- */
+/* soft cream glow behind all the text so it stands out from the floral background */
+.wrap:before{content:"";position:absolute;inset:-16px -12px;z-index:-1;border-radius:44px;pointer-events:none;
+  background:radial-gradient(ellipse at center,#fffaf0f2 40%,#fffaf000 78%)}
+.pill{background:#fffaf0;color:#3d0a10;font-size:12px;border-color:#c9a45c}
+.verse{background:#fffaf0;border-color:#c9a45c}
+.verse .hi{font-size:17px;color:#3d0a10}
+.inv{font-size:20px;font-weight:600;line-height:1.5;color:#3d0a10;max-width:340px;text-shadow:0 1px 0 #fff}
+.nm{color:#a3122c;text-shadow:0 2px 0 #fffaf0,0 0 14px #fffaf0}
+.par{font-size:20px;font-weight:700;color:#3d0a10;text-shadow:0 1px 0 #fff}
+.weds{font-size:34px;color:#5c0f14;text-shadow:0 1px 0 #fff}
+@media (max-width:480px){
+  .inv{font-size:15px;max-width:300px}
+  .par{font-size:17px}
+}
+/* ---------- FLOWERS: clearly visible, but behind all text ---------- */
+#shower{z-index:1}
+#shower .f{filter:drop-shadow(0 3px 5px #0004)}
+.ev{isolation:auto}                                   /* lets flowers pass over card backgrounds */
+.stage .cap,.stage .env,.stage .ganesh{z-index:3}
+.wrap,.shiva,.bells{z-index:3}
+#save .in,#venue .in,#thanks>*,#rsvp>*,#foot>*,#events .t,#events .st,#events .divider{position:relative;z-index:3}
+/* ---------- WELCOME PAGE: fix overlapping text ---------- */
+.wrap{max-width:480px}
+.inv{margin-top:20px;margin-bottom:12px;line-height:1.55;max-width:400px}
+.nm{line-height:1.35;margin-top:8px;padding-bottom:6px;font-size:clamp(58px,15vw,92px)}
+.par{margin-top:10px;line-height:1.5}
+.weds{margin:22px 0 6px;line-height:1.3}
+.nm + .par + .weds + .nm{margin-top:10px}
+.shiva{margin-top:20px}
+@media (max-width:480px){
+  .nm{font-size:clamp(54px,17vw,72px)}
+  .inv{font-size:15px;max-width:320px}
+}
+.firm{display:block;width:fit-content;max-width:100%;margin:12px auto 0}
+/* ---------- CLEARER LABELS (RSVP, LOVINGLY INVITED BY, etc.) ---------- */
+.small{font:700 17px 'Cinzel',serif;letter-spacing:.2em;color:#7a1426}
+#thanksList .small{display:inline-block;padding-bottom:5px;border-bottom:1px solid #c28b3a}
+@media (max-width:480px){
+  .small{font-size:13px;letter-spacing:.16em}
+}
+
+/* ---------- SMALLER CONTACT DETAILS ---------- */
+#rsvp{padding:64px 16px}
+#rsvp h2{font-size:clamp(32px,7vw,44px)}
+#rsvp .small{font-size:12px}
+#rsvp .msg{font-size:16px}
+.rg{grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;max-width:680px;margin-top:26px}
+.rc{padding:16px 12px;border-radius:18px;gap:2px}
+.rc .nm2{font-size:26px}
+.rc .rel{font-size:10px;letter-spacing:.16em}
+.rc .ph{font-size:13px;margin-top:6px}
+.rc .acts{margin-top:10px;gap:6px}
+.rb{padding:6px 12px;font-size:10px}
 </style>
 </head>
 <body>
@@ -268,18 +323,18 @@ body{overflow-x:hidden;-webkit-text-size-adjust:100%}
          onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
     <span class="seal" id="seal">
       <span></span>
-      <img src="images/PSlogo.png" alt="Monogram" onerror="this.remove()">
+      <img src="images/PSLogo.png" alt="Monogram" onerror="this.remove()">
     </span>
     <span class="hint">CLICK HERE</span>
   </button>
 
   <div class="cap">
     <h1>YOU’RE INVITED</h1>
-    <p>Tap the logo to open our invitation</p>
+    <!----<p>Tap the logo to open our invitation</p>---->
   </div>
 </div>
 
-<audio id="music" src="audio/background.mp3" preload="auto" loop></audio>
+<audio id="music" src="images/background.mp3" preload="auto" loop></audio>
 <button class="mute hidden" id="mute" aria-label="Mute music">🔊</button>
 
 <main id="invite" class="hidden">
@@ -294,16 +349,16 @@ body{overflow-x:hidden;-webkit-text-size-adjust:100%}
 
     <div class="verse" style="animation-delay:.4s">
       <p class="hi">मङ्गलम् भगवान विष्णुः मङ्गलम् गरुडध्वजः ।<br>मङ्गलम् पुण्डरी काक्षः मङ्गलाय तनो हरिः ।।</p>
-      <small>Mangalam Bhagwan Vishnu · Mangalam Garudadhwajah<br>Mangalam Pundarikakshah · Mangalaya Tano Harih</small>
+      <!----<small>Mangalam Bhagwan Vishnu · Mangalam Garudadhwajah<br>Mangalam Pundarikakshah · Mangalaya Tano Harih</small> ---->
     </div>
 
-    <p class="inv" style="animation-delay:.7s">We request the honor of your gracious presence on the auspicious occasion of the wedding celebration of</p>
+    <p class="inv" style="animation-delay:.7s">Smt. Shanti Devi and Sh. Mange Ram Jain solicit your gracious presence and blessings on the auspicious occasion of the wedding celebration of their beloved grandson</p>
 
     <div class="nm" style="animation-delay:.9s">Piyush</div>
-    <p class="par" style="animation-delay:1.1s">S/o Mr. Mukesh Jain &amp; Mrs. Yogita Jain<em>Grandson of Mr. Mange Ram Jain &amp; Mrs. Shanti Devi</em></p>
+    <p class="par" style="animation-delay:1.1s">S/o Mr. Mukesh Jain &amp; Mrs. Yogita Jain<!---<em>Grandson of Mr. Mange Ram Jain &amp; Mrs. Shanti Devi</em>----></p>
     <div class="weds" style="animation-delay:1.2s">weds</div>
     <div class="nm" style="animation-delay:1.3s">Sonali</div>
-    <p class="par" style="animation-delay:1.5s">D/o Mr. Shyamsunder Goel &amp; Mrs. Manju Goel</p>
+    <p class="par" style="animation-delay:1.5s">D/o Mr. Shyam Sunder Goel &amp; Mrs. Manju Goel</p>
   </div>
 
   <img class="shiva" src="images/g-shiva-parvati.png" alt="Shiva-Parvati" onerror="this.outerHTML='<div class=shiva style=font-size:70px;text-align:center>🔱💞</div>'">
@@ -344,7 +399,7 @@ body{overflow-x:hidden;-webkit-text-size-adjust:100%}
 <section id="venue" class="hidden">
   <img class="leaf" src="images/wedding-hero.jpg" alt="" onerror="this.remove()">
   <div class="in">
-    <p class="small">WHERE WE CELEBRATE</p>
+    <!---<p class="small">WHERE WE CELEBRATE</p>--->
     <h2>Locations</h2>
     <div class="divider"><i></i><span>❀</span><i></i></div>
     <div id="places"></div>
@@ -352,8 +407,7 @@ body{overflow-x:hidden;-webkit-text-size-adjust:100%}
 </section>
 
 <section id="rsvp" class="hidden">
-  <p class="small">KINDLY</p>
-  <h2>RSVP</h2>
+  <h2>Contact Details</h2>
   <div class="divider"><i></i><span>❀</span><i></i></div>
   <p class="msg" id="rsvpMsg"></p>
   <div class="rg" id="rsvpList"></div>
@@ -363,196 +417,855 @@ body{overflow-x:hidden;-webkit-text-size-adjust:100%}
   <p class="wl">WITH LOVE</p>
   <h3>Piyush &amp; Sonali</h3>
   <div class="dv"><i></i><span style="font-size:26px">❤️</span><i></i></div>
-  <p class="d">3rd – 5th December 2026</p>
+  <p class="d">5th December 2026</p>
   
 </footer>
 
 <script>
-const $=id=>document.getElementById(id);
-// if the envelope image was already cached before the handler ran
-const im=$("envimg"); if(im && im.complete && im.naturalWidth) $("env").classList.add("has-img");
+"use strict";
 
-// falling petals
-const P=["🌸","🍃","🌺","🌼"];
+/* =========================================================
+   1. SMALL HELPERS
+   ========================================================= */
+
+const getElement = (id) => document.getElementById(id);
+
+const FLOWER_EMOJIS = ["🌸", "🍃", "🌺", "🌼"];
+
+function randomBetween(min, max) {
+  return min + Math.random() * (max - min);
+}
+
+function makePetalBurst(count, distanceMin, distanceMax) {
+  return Array.from({ length: count }, (_, index) => {
+    const angle = randomBetween(0, Math.PI * 2);
+    const distance = randomBetween(distanceMin, distanceMax);
+    const x = Math.cos(angle) * distance;
+    const y = Math.sin(angle) * distance;
+
+    return `
+      <span style="--x:${x}px; --y:${y}px">
+        ${FLOWER_EMOJIS[index % FLOWER_EMOJIS.length]}
+      </span>
+    `;
+  }).join("");
+}
+
+function showSections(ids) {
+  ids.forEach((id) => getElement(id)?.classList.remove("hidden"));
+}
 
 
-// CLICK ON LOGO / ENVELOPE -> action
-let opened=false;
-$("env").addEventListener("click",()=>{
-  if(opened) return; opened=true;
-  const au=$("music"); au.volume=.45; au.play().catch(()=>{});   // music starts on the click
-  $("mute").classList.remove("hidden");
-  const stage=$("stage"), env=$("env");
+/* =========================================================
+   2. OPENING ENVELOPE AND BACKGROUND MUSIC
+   ========================================================= */
+
+function prepareEnvelopeImage() {
+  const envelopeImage = getElement("envimg");
+
+  // The image might have loaded before its onload handler ran.
+  if (envelopeImage?.complete && envelopeImage.naturalWidth > 0) {
+    getElement("env").classList.add("has-img");
+  }
+}
+
+function playBackgroundMusic() {
+  const music = getElement("music");
+  music.volume = 0.45;
+
+  // Browsers may block playback; the invitation should still open.
+  music.play().catch(() => {});
+  getElement("mute").classList.remove("hidden");
+}
+
+function addEnvelopePetalBurst(envelope) {
+  const burst = document.createElement("div");
+  burst.className = "burst";
+  burst.innerHTML = makePetalBurst(28, 120, 340);
+  envelope.appendChild(burst);
+}
+
+function revealInvitation() {
+  const shower = getElement("shower");
+  const invitation = getElement("invite");
+
+  getElement("stage").classList.add("hidden");
+
+  // Remove the falling-flower overlay after the opening animation.
+  shower.style.transition = "opacity 0.3s";
+  shower.style.opacity = "0";
+
+  window.setTimeout(() => shower.remove(), 900);
+
+  showSections([
+    "invite",
+    "save",
+    "events",
+    "thanks",
+    "venue",
+    "rsvp",
+    "foot",
+    "bfly"
+  ]);
+
+  initializeScratchCard();
+
+  // Wait for the invitation to become visible before fading it in.
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => invitation.classList.add("show"));
+  });
+
+  window.scrollTo(0, 0);
+}
+
+function openInvitation() {
+  const stage = getElement("stage");
+  const envelope = getElement("env");
+
+  // Prevent the opening animation from running more than once.
+  if (envelope.dataset.opened === "true") return;
+  envelope.dataset.opened = "true";
+
+  playBackgroundMusic();
   stage.classList.add("go");
-  // petal burst from the seal
-  const b=document.createElement("div"); b.className="burst";
-  b.innerHTML=Array.from({length:28},(_,i)=>{
-    const a=Math.random()*Math.PI*2, d=120+Math.random()*220;
-    return `<span style="--x:${Math.cos(a)*d}px;--y:${Math.sin(a)*d}px">${P[i%4]}</span>`}).join("");
-  env.appendChild(b);
-  env.classList.add("opening");
-  // after the animation: fade out the intro, show the invitation
-  setTimeout(()=>stage.classList.add("gone"),900);
-  setTimeout(()=>{
-    stage.classList.add("hidden");
-    const inv=$("invite"); inv.classList.remove("hidden"); $("save").classList.remove("hidden"); $("events").classList.remove("hidden"); ["thanks","venue","rsvp","foot","bfly"].forEach(i=>$(i).classList.remove("hidden")); initScratch();
-    requestAnimationFrame(()=>requestAnimationFrame(()=>inv.classList.add("show")));
-    window.scrollTo(0,0);
-  },1700);
-});
+  addEnvelopePetalBurst(envelope);
+  envelope.classList.add("opening");
 
-// fallback if the welcome background image is missing
-const t=new Image(); t.onerror=()=>$("invite").classList.add("nobg"); t.src="images/g-welcome-bg.png";
-// mute / unmute
-$("mute").onclick=()=>{const au=$("music"); au.muted=!au.muted; $("mute").textContent=au.muted?"🔇":"🔊";};
-
-// ---------- SAVE THE DATE: scratch to reveal + countdown ----------
-const WEDDING_DATE="2026-12-05T00:00:00+05:30";   // 05-12-2026  (change here)
-function tick(){
-  const t=Math.max(0,new Date(WEDDING_DATE).getTime()-Date.now());
-  const v=[[Math.floor(t/864e5),"Days"],[Math.floor(t/36e5%24),"Hours"],[Math.floor(t/6e4%60),"Minutes"],[Math.floor(t/1e3%60),"Seconds"]];
-  $("count").innerHTML=v.map(a=>`<div><b>${String(a[0]).padStart(2,"0")}</b><span>${a[1]}</span></div>`).join("");
+  window.setTimeout(() => stage.classList.add("gone"), 900);
+  window.setTimeout(revealInvitation, 1700);
 }
-function initScratch(){
-  const cv=$("cv"), r=cv.parentNode.getBoundingClientRect(), dpr=window.devicePixelRatio||1;
-  cv.width=r.width*dpr; cv.height=r.height*dpr;
-  const x=cv.getContext("2d"); x.scale(dpr,dpr);
-  const g=x.createLinearGradient(0,0,r.width,r.height);
-  g.addColorStop(0,"#5c0f14"); g.addColorStop(.25,"#8b1e24"); g.addColorStop(.5,"#b3262d"); g.addColorStop(.75,"#8b1e24"); g.addColorStop(1,"#4a0b10");
-  x.fillStyle=g; x.fillRect(0,0,r.width,r.height);
-  x.fillStyle="#f8d7a8"; x.font='600 14px Cinzel,serif'; x.textAlign="center"; x.textBaseline="middle";
-  x.fillText("✦  SCRATCH TO REVEAL  ✦",r.width/2,r.height/2);
-  let down=false, done=false;
-  const scratch=(cx,cy)=>{const b=cv.getBoundingClientRect(); x.globalCompositeOperation="destination-out"; x.beginPath(); x.arc(cx-b.left,cy-b.top,28,0,7); x.fill();};
-  const check=()=>{
-    const d=x.getImageData(0,0,cv.width,cv.height).data; let n=0;
-    for(let i=3;i<d.length;i+=160) if(d[i]<60) n++;
-    if(n/(d.length/160)>.45 && !done){                       // 45% scratched -> reveal
-      done=true; x.clearRect(0,0,cv.width,cv.height); cv.style.pointerEvents="none";
-      petalBurst($("save").querySelector(".scwrap"));
-      $("count").classList.add("on"); tick(); setInterval(tick,1000);
-    }
+
+function prepareWelcomeBackground() {
+  const backgroundImage = new Image();
+
+  backgroundImage.onerror = () => {
+    getElement("invite").classList.add("nobg");
   };
-  cv.onpointerdown=e=>{down=true; cv.setPointerCapture(e.pointerId); scratch(e.clientX,e.clientY);};
-  cv.onpointermove=e=>{ if(down){ e.preventDefault(); scratch(e.clientX,e.clientY);} };
-  cv.onpointerup=cv.onpointerleave=()=>{ if(down){ down=false; check(); } };
-}
-function petalBurst(host){
-  const b=document.createElement("div"); b.className="burst";
-  b.innerHTML=Array.from({length:36},(_,i)=>{const a=Math.random()*Math.PI*2,d=100+Math.random()*240;
-    return `<span style="--x:${Math.cos(a)*d}px;--y:${Math.sin(a)*d}px">${["🌸","🌺","🌼","🍃"][i%4]}</span>`}).join("");
-  host.appendChild(b); setTimeout(()=>b.remove(),1400);
+
+  backgroundImage.src = "images/g-welcome-bg.png";
 }
 
-// ---------- EVENTS SCHEDULE ----------
-/* images needed: images/g-haldi-bg.png, g-mehndi-bg.png, g-sangeet-bg.png, g-wedding-bg.png (card backgrounds)
-                  images/haldi.png, 01.png (mehndi), 03.png (sangeet), 04.png (wedding)  (couple pictures)  */
+function toggleMusic() {
+  const music = getElement("music");
+  music.muted = !music.muted;
 
-/* ================= EDIT YOUR LOCATIONS HERE =================
-   address -> used for the embedded map and the "Open in Google Maps" links.
-   link    -> OPTIONAL: paste a Google Maps share link (maps.app.goo.gl/...) to open that exact pin instead. */
-const PLACES={
-  res:  {label:"RESIDENCE", title:"Shanti Complex", when:"Haldi · Mehndi · Sangeet  |  3rd – 4th December 2026",
-         address:"136 M. C. Colony,Hisar", side:"",link:""},
-  venue:{label:"WEDDING VENUE", title:"Maharaja Aggarsain Bhawan", when:"Baraat · Varmala · Rituals  |  5th December 2026",
-         address:"Maharaja Aggarsain Bhawan, Hisar",side:"(Big Lawn )", link:""}
+  getElement("mute").textContent = music.muted ? "🔇" : "🔊";
+}
+
+function setupEnvelope() {
+  prepareEnvelopeImage();
+  prepareWelcomeBackground();
+
+  getElement("env").addEventListener("click", openInvitation);
+  getElement("mute").addEventListener("click", toggleMusic);
+}
+
+
+/* =========================================================
+   3. SAVE-THE-DATE SCRATCH CARD AND COUNTDOWN
+   ========================================================= */
+
+// Change the date here if the wedding date changes.
+const WEDDING_DATE = "2026-12-05T00:00:00+05:30";
+
+let countdownInterval = null;
+
+function updateCountdown() {
+  const remainingMs = Math.max(
+    0,
+    new Date(WEDDING_DATE).getTime() - Date.now()
+  );
+
+  const countdownValues = [
+    [Math.floor(remainingMs / 86400000), "Days"],
+    [Math.floor((remainingMs / 3600000) % 24), "Hours"],
+    [Math.floor((remainingMs / 60000) % 60), "Minutes"],
+    [Math.floor((remainingMs / 1000) % 60), "Seconds"]
+  ];
+
+  getElement("count").innerHTML = countdownValues
+    .map(([value, label]) => `
+      <div>
+        <b>${String(value).padStart(2, "0")}</b>
+        <span>${label}</span>
+      </div>
+    `)
+    .join("");
+}
+
+function drawScratchCover(canvas, context, width, height) {
+  const gradient = context.createLinearGradient(0, 0, width, height);
+
+  gradient.addColorStop(0, "#5c0f14");
+  gradient.addColorStop(0.25, "#8b1e24");
+  gradient.addColorStop(0.5, "#b3262d");
+  gradient.addColorStop(0.75, "#8b1e24");
+  gradient.addColorStop(1, "#4a0b10");
+
+  context.fillStyle = gradient;
+  context.fillRect(0, 0, width, height);
+
+  context.fillStyle = "#f8d7a8";
+  context.font = "600 14px Cinzel, serif";
+  context.textAlign = "center";
+  context.textBaseline = "middle";
+  context.fillText("✦  SCRATCH TO REVEAL  ✦", width / 2, height / 2);
+}
+
+function clearScratchAtPosition(canvas, context, clientX, clientY) {
+  const bounds = canvas.getBoundingClientRect();
+
+  context.globalCompositeOperation = "destination-out";
+  context.beginPath();
+  context.arc(clientX - bounds.left, clientY - bounds.top, 28, 0, Math.PI * 2);
+  context.fill();
+}
+
+function revealCountdown(canvas, context) {
+  const pixels = context.getImageData(
+    0,
+    0,
+    canvas.width,
+    canvas.height
+  ).data;
+
+  let transparentPixels = 0;
+  let sampledPixels = 0;
+
+  // Check every 160th alpha value to estimate how much has been scratched.
+  for (let index = 3; index < pixels.length; index += 160) {
+    sampledPixels++;
+
+    if (pixels[index] < 60) {
+      transparentPixels++;
+    }
+  }
+
+  const scratchedRatio = transparentPixels / sampledPixels;
+
+  if (scratchedRatio <= 0.45 || canvas.dataset.revealed === "true") {
+    return;
+  }
+
+  canvas.dataset.revealed = "true";
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  canvas.style.pointerEvents = "none";
+
+  makePetalBurstAt(getElement("save").querySelector(".scwrap"));
+  getElement("count").classList.add("on");
+
+  updateCountdown();
+
+  // Start only one countdown timer.
+  if (countdownInterval === null) {
+    countdownInterval = window.setInterval(updateCountdown, 1000);
+  }
+}
+
+function makePetalBurstAt(container) {
+  const burst = document.createElement("div");
+  burst.className = "burst";
+  burst.innerHTML = makePetalBurst(36, 100, 340);
+  container.appendChild(burst);
+
+  window.setTimeout(() => burst.remove(), 1400);
+}
+
+function initializeScratchCard() {
+  const canvas = getElement("cv");
+  const bounds = canvas.parentNode.getBoundingClientRect();
+  const pixelRatio = window.devicePixelRatio || 1;
+  const context = canvas.getContext("2d");
+
+  canvas.width = bounds.width * pixelRatio;
+  canvas.height = bounds.height * pixelRatio;
+  context.scale(pixelRatio, pixelRatio);
+
+  drawScratchCover(canvas, context, bounds.width, bounds.height);
+
+  let isScratching = false;
+
+  canvas.addEventListener("pointerdown", (event) => {
+    if (canvas.dataset.revealed === "true") return;
+
+    isScratching = true;
+    canvas.setPointerCapture(event.pointerId);
+
+    clearScratchAtPosition(canvas, context, event.clientX, event.clientY);
+  });
+
+  canvas.addEventListener("pointermove", (event) => {
+    if (!isScratching) return;
+
+    event.preventDefault();
+    clearScratchAtPosition(canvas, context, event.clientX, event.clientY);
+  });
+
+  function finishScratching() {
+    if (!isScratching) return;
+
+    isScratching = false;
+    revealCountdown(canvas, context);
+  }
+
+  canvas.addEventListener("pointerup", finishScratching);
+  canvas.addEventListener("pointercancel", finishScratching);
+  canvas.addEventListener("pointerleave", finishScratching);
+}
+
+
+/* =========================================================
+   4. VENUE AND EVENT INFORMATION
+   Edit the information in these objects to update the website.
+   ========================================================= */
+
+const PLACES = {
+  res: {
+    label: "RESIDENCE",
+    title: "Shanti Complex",
+    when: "Haldi · Mehndi · Sangeet  |  3rd – 4th December 2026",
+    address: "136 M. C. Colony,Hisar",
+    side: "",
+    link: ""
+  },
+
+  venue: {
+    label: "WEDDING VENUE",
+    title: "Maharaja Aggarsain Bhawan",
+    when: "Baraat · Varmala · Rituals  |  5th December 2026",
+    address: "Maharaja Aggarsain Bhawan, Hisar",
+    side: "(Big Lawn )",
+    link: ""
+  }
 };
-const mapsLink=p=>p.link||("https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(p.address));
-const EVENTS=[
- {k:"haldi",  loc:"res", bg:"g-haldi-bg.png",  pic:"haldi.png", art:"🌼", mt:96,mlr:130,mm:80, tag:"#SunMeetsSky", when:"A MORNING", line:"Filled with love, laughter and turmeric.",
-  name:"HALDI CEREMONY", time:"3rd December 2026 | 10:00 AM", c:"#b45309", pill:"#92400e", pbg:"#f59e0b1a", pbd:"#d9770650"},
- {k:"mehndi", loc:"res", bg:"g-mehndi-bg.png", pic:"mehndi.png", art:"🤲", mt:130,mlr:125,mm:28, tag:"#MehndiHaiRachneWali", when:"AN EVENING", line:"Filled with vibrant hues, joyful moments and the fragrance of henna.",
-  name:"MEHNDI CEREMONY", time:"3rd December 2026 | 8:00 PM", c:"#065f46", pill:"#065f46", pbg:"#10b9811a", pbd:"#05966950"},
- {k:"sangeet",loc:"res", bg:"g-sangeet-bg.png",pic:"sangeet.png", art:"🎶", mt:130,mlr:145, mm:70,dk:1, tag:"#YeShaamShandaar", when:"AN EVENING", line:"Where melodies meet memories and hearts dance with joy.",
-  name:"SANGEET CELEBRATION", time:"4th December 2026 | 6:00 PM", c:"#fde68a", title:"#47296b", pill:"#47296b", pbg:"#0003", pbd:"#e8cfa840",wc:"#47296b"},
- {k:"wedding",loc:"venue", bg:"g-wedding-bg.png",pic:"wedding.png", art:"💍", mt:250,mlr:130, mm:90,dk:1,  when:"A SACRED CELEBRATION", line:"As two hearts, two families and two journeys become one.",
-  name:"WEDDING CEREMONY", date:"5th December 2026", c:"#7f1d1d", title:"#7f1d1d", rows:[["✦ Baraat","6:00 PM"],["✦ Varmala","8:00 PM"],["✦ Phere","Taaron Ki Chhaon Mein"]]}
+
+function getMapsLink(place) {
+  if (place.link) return place.link;
+
+  return (
+    "https://www.google.com/maps/search/?api=1&query=" +
+    encodeURIComponent(place.address)
+  );
+}
+
+const EVENTS = [
+  {
+    key: "haldi",
+    location: "res",
+    background: "g-haldi-bg.png",
+    picture: "haldi.png",
+    emoji: "🌼",
+    desktopTop: 96,
+    desktopSide: 130,
+    mobileTop: 80,
+    hashtag: "#SunMeetsSky",
+    timeOfDay: "A MORNING",
+    description: "Filled with love, laughter and turmeric.",
+    name: "HALDI CEREMONY",
+    time: "3rd December 2026 | 10:00 AM",
+    color: "#b45309",
+    pillColor: "#92400e",
+    pillBackground: "#f59e0b1a",
+    pillBorder: "#d9770650"
+  },
+  {
+    key: "mehndi",
+    location: "res",
+    background: "g-mehndi-bg.png",
+    picture: "mehndi.png",
+    emoji: "🤲",
+    desktopTop: 130,
+    desktopSide: 125,
+    mobileTop: 28,
+    hashtag: "#MehndiHaiRachneWali",
+    timeOfDay: "AN EVENING",
+    description: "Filled with vibrant hues, joyful moments and the fragrance of henna.",
+    name: "MEHNDI CEREMONY",
+    time: "3rd December 2026 | 8:00 PM",
+    color: "#065f46",
+    pillColor: "#065f46",
+    pillBackground: "#10b9811a",
+    pillBorder: "#05966950"
+  },
+  {
+    key: "sangeet",
+    location: "res",
+    background: "g-sangeet-bg.png",
+    picture: "sangeet.png",
+    emoji: "🎶",
+    desktopTop: 130,
+    desktopSide: 145,
+    mobileTop: 70,
+    darkCard: true,
+    hashtag: "#YeShaamShandaar",
+    timeOfDay: "AN EVENING",
+    description: "Where melodies meet memories and hearts dance with joy.",
+    name: "SANGEET CELEBRATION",
+    time: "4th December 2026 | 6:00 PM",
+    color: "#fde68a",
+    titleColor: "#47296b",
+    pillColor: "#47296b",
+    pillBackground: "#0003",
+    pillBorder: "#e8cfa840",
+    whereColor: "#47296b"
+  },
+  {
+    key: "wedding",
+    location: "venue",
+    background: "g-wedding-bg.png",
+    picture: "wedding.png",
+    emoji: "💍",
+    desktopTop: 250,
+    desktopSide: 130,
+    mobileTop: 90,
+    darkCard: true,
+    timeOfDay: "A SACRED CELEBRATION",
+    description: "As two hearts, two families and two journeys become one.",
+    name: "WEDDING CEREMONY",
+    date: "5th December 2026",
+    color: "#7f1d1d",
+    titleColor: "#7f1d1d",
+    schedule: [
+      ["✦ Sehrabandi", "6:00 PM"],
+      ["✦ Ghurchari", "7:00 PM"],
+      ["✦ Departure of Barat", "7:15 PM"],
+      ["✦ Dinner", "8:00 PM"],
+      ["✦ Phere", "Taaron Ki Chhaon Mein"]
+    ]
+  }
 ];
-const R=(n,f)=>Array.from({length:n},(_,i)=>f(i)).join("");
-const FX={
- haldi:()=>R(15,()=>`<i class="tdot" style="left:${Math.random()*95}%;top:${10+Math.random()*80}%;animation-delay:${Math.random()*3}s;animation-duration:${2.5+Math.random()*3}s"></i>`),
- mehndi:()=>`<svg class="vine" style="left:0" viewBox="0 0 100 100"><path stroke="#065f46" opacity=".35" d="M0 20C10 20 20 10 20 0M0 40C20 40 40 20 40 0M0 60C30 60 60 30 60 0M0 80C40 80 80 40 80 0"/></svg><svg class="vine" style="right:0;transform:scaleX(-1)" viewBox="0 0 100 100"><path stroke="#065f46" opacity=".35" d="M0 20C10 20 20 10 20 0M0 40C20 40 40 20 40 0M0 60C30 60 60 30 60 0"/></svg>`,
- sangeet:()=>`<div class="lights">${R(12,i=>`<i style="animation-delay:${i*.18}s"></i>`)}</div>`+R(4,i=>`<span class="note" style="left:${15+Math.random()*70}%;animation-delay:${i*1.6}s">${i%2?"🎶":"🎵"}</span>`),
- wedding:()=>R(6,()=>`<span class="cp" style="left:${10+Math.random()*80}%;animation-duration:${12+Math.random()*8}s;animation-delay:${Math.random()*5}s">🌸</span>`)
+
+
+/* =========================================================
+   5. EVENT CARD DECORATIONS
+   ========================================================= */
+
+function repeatHtml(count, createHtml) {
+  return Array.from({ length: count }, (_, index) => createHtml(index)).join("");
+}
+
+function createHaldiDecorations() {
+  return repeatHtml(15, () => `
+    <i
+      class="tdot"
+      style="
+        left:${randomBetween(0, 95)}%;
+        top:${randomBetween(10, 90)}%;
+        animation-delay:${randomBetween(0, 3)}s;
+        animation-duration:${randomBetween(2.5, 5.5)}s;
+      ">
+    </i>
+  `);
+}
+
+function createMehndiDecorations() {
+  const vinePath = `
+    <path
+      stroke="#065f46"
+      opacity=".35"
+      d="M0 20C10 20 20 10 20 0
+         M0 40C20 40 40 20 40 0
+         M0 60C30 60 60 30 60 0
+         M0 80C40 80 80 40 80 0">
+    </path>
+  `;
+
+  return `
+    <svg class="vine" style="left:0" viewBox="0 0 100 100">${vinePath}</svg>
+    <svg class="vine" style="right:0;transform:scaleX(-1)" viewBox="0 0 100 100">
+      ${vinePath}
+    </svg>
+  `;
+}
+
+function createSangeetDecorations() {
+  const lights = repeatHtml(
+    12,
+    (index) => `<i style="animation-delay:${index * 0.18}s"></i>`
+  );
+
+  const notes = repeatHtml(4, (index) => `
+    <span
+      class="note"
+      style="
+        left:${randomBetween(15, 85)}%;
+        animation-delay:${index * 1.6}s;
+      ">
+      ${index % 2 ? "🎶" : "🎵"}
+    </span>
+  `);
+
+  return `<div class="lights">${lights}</div>${notes}`;
+}
+
+function createWeddingDecorations() {
+  return repeatHtml(6, () => `
+    <span
+      class="cp"
+      style="
+        left:${randomBetween(10, 90)}%;
+        animation-duration:${randomBetween(12, 20)}s;
+        animation-delay:${randomBetween(0, 5)}s;
+      ">
+      🌸
+    </span>
+  `);
+}
+
+const EVENT_DECORATIONS = {
+  haldi: createHaldiDecorations,
+  mehndi: createMehndiDecorations,
+  sangeet: createSangeetDecorations,
+  wedding: createWeddingDecorations
 };
-$("cards").innerHTML=EVENTS.map(e=>`
- <article class="ev ${e.k}">
-  <img class="bgimg" src="images/${e.bg}" alt="" onerror="this.remove()">
-  <div class="fx">${FX[e.k]()}</div>
-  <div class="glass ${e.dk?"dk":""}" style="--mt:${e.mt}px;--mlr:${e.mlr}px;--mm:${e.mm}px;color:${e.c}">
-    <img class="logo" src="images/PSlogo.png" alt="Monogram" onerror="this.remove()">
 
-    <h3 style="opacity:.85">PLEASE JOIN US FOR ${e.when}</h3>
-    <p class="l" style="color:${e.k==="haldi"||e.k==="mehndi"?"#3b2a2acc":e.c+"cc"}">${e.line}</p>
-    <hr>
-    <h2 style="color:${e.title||e.c}">${e.name}</h2>
-    ${e.date?`<p class="dt" style="color:#5c0f14;font-size:14px;font-weight:700;text-shadow:0 1px 0 #ffffff99">${e.date}</p>`:""}
-    ${e.rows?`<div class="times">${e.rows.map(r=>`<p><span>${r[0]}</span><b>${r[1]}</b></p>`).join("")}</div>`:""}
-    ${e.time?`<span class="pill" style="color:${e.pill};background:${e.pbg};border-color:${e.pbd}">${e.time}</span>`:""}
-    ${e.loc?`<a class="where" style="color:${e.wc||'inherit'}"  target="_blank" rel="noreferrer" href="${mapsLink(PLACES[e.loc])}">📍 ${e.loc==="res"?"At our residence":"At "+PLACES.venue.title}</a>`:""}
-  </div>
-  <img class="couple" src="images/${e.pic}" alt="${e.name}" onerror="this.outerHTML='<div class=couple style=font-size:80px;text-align:center>${e.art}</div>'">
- </article>`).join("");
+function createEventSchedule(schedule) {
+  if (!schedule) return "";
 
-// ---------- VENUES (residence + wedding venue, each with map) ----------
-$("places").innerHTML=["res","venue"].map(k=>{const p=PLACES[k]; return `
-  <div class="place">
-    <p class="lab">${p.label}</p>
-    <h3>${p.title}</h3>
-    <h4>${p.side}</h4>
-    <p class="when">${p.when}</p>
-    <p class="adr"><b>📍 ${p.address}</b></p>
+  const rows = schedule.map(([activity, time]) => `
+    <p>
+      <span>${activity}</span>
+      <b>${time}</b>
+    </p>
+  `).join("");
 
-    <a class="btn" target="_blank" rel="noreferrer" href="${mapsLink(p)}">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg> GET DIRECTIONS</a>
-  </div>`}).join("");
+  return `<div class="times">${rows}</div>`;
+}
 
-  // ---------- LAST PAGE: family, uncles, hosts, cousins, firm ----------
-/* ================= EDIT NAMES HERE (leave a list empty [] to hide that part) ================= */
-const THANKS={
-  family:"Jain Family",
-  uncles:{label:"WITH BLESSINGS OF", names:["Mukesh Jain","Rakesh Jain","Dharamvir Jain"]},        // ← CHANGE
-  hosts: {label:"LOVINGLY INVITED BY", names:["Sanyam Jain","Raman Jain","Lavnaya Jain","Bhavya Jain"]},
-  firm:  {label:"WITH BEST COMPLIMENTS FROM", name:["Arhem Super Store","Jain Medical Hall"]}              // ← CHANGE
+function createEventCard(event) {
+  const place = event.location ? PLACES[event.location] : null;
+  const locationText = event.location === "res"
+    ? "At our residence"
+    : `At ${place?.title || ""}`;
+
+  const eventDate = event.date
+    ? `<p class="dt" style="color:#5c0f14;font-size:14px;font-weight:700;text-shadow:0 1px 0 #ffffff99">${event.date}</p>`
+    : "";
+
+  const eventTime = event.time
+    ? `
+      <span
+        class="pill"
+        style="
+          color:${event.pillColor};
+          background:${event.pillBackground};
+          border-color:${event.pillBorder};
+        ">
+        ${event.time}
+      </span>
+    `
+    : "";
+
+  const locationLink = place
+    ? `
+      <a
+        class="where"
+        style="color:${event.whereColor || "inherit"}"
+        target="_blank"
+        rel="noreferrer"
+        href="${getMapsLink(place)}">
+        📍 ${locationText}
+      </a>
+    `
+    : "";
+
+  const imageFallback = `<div class="couple" style="font-size:80px;text-align:center">${event.emoji}</div>`;
+
+  return `
+    <article class="ev ${event.key}">
+      <img
+        class="bgimg"
+        src="images/${event.background}"
+        alt=""
+        onerror="this.remove()">
+
+      <div class="fx">${EVENT_DECORATIONS[event.key]()}</div>
+
+      <div
+        class="glass ${event.darkCard ? "dk" : ""}"
+        style="
+          --mt:${event.desktopTop}px;
+          --mlr:${event.desktopSide}px;
+          --mm:${event.mobileTop}px;
+          color:${event.color};
+        ">
+        <img
+          class="logo"
+          src="images/PSLogo.png"
+          alt="Monogram"
+          onerror="this.remove()">
+
+        <h3 style="opacity:.85">PLEASE JOIN US FOR ${event.timeOfDay}</h3>
+
+        <p
+          class="l"
+          style="color:${
+            event.key === "haldi" || event.key === "mehndi"
+              ? "#3b2a2acc"
+              : `${event.color}cc`
+          }">
+          ${event.description}
+        </p>
+
+        <hr>
+
+        <h2 style="color:${event.titleColor || event.color}">${event.name}</h2>
+
+        ${eventDate}
+        ${createEventSchedule(event.schedule)}
+        ${eventTime}
+        ${locationLink}
+      </div>
+
+      <img
+        class="couple"
+        src="images/${event.picture}"
+        alt="${event.name}"
+        onerror="this.outerHTML='${imageFallback}'">
+    </article>
+  `;
+}
+
+function renderEvents() {
+  getElement("cards").innerHTML = EVENTS.map(createEventCard).join("");
+}
+
+
+/* =========================================================
+   6. VENUE DETAILS AND GOOGLE MAPS LINKS
+   ========================================================= */
+
+function createPlaceSection(place) {
+  return `
+    <div class="place">
+      <p class="lab">${place.label}</p>
+      <h3>${place.title}</h3>
+      <h4>${place.side}</h4>
+      <p class="adr"><b>📍 ${place.address}</b></p>
+
+      <a
+        class="btn"
+        target="_blank"
+        rel="noreferrer"
+        href="${getMapsLink(place)}">
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#fff"
+          stroke-width="2"
+          stroke-linejoin="round">
+          <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+        </svg>
+        GET DIRECTIONS
+      </a>
+    </div>
+  `;
+}
+
+function renderPlaces() {
+  getElement("places").innerHTML = ["res", "venue"]
+    .map((key) => createPlaceSection(PLACES[key]))
+    .join("");
+}
+
+
+/* =========================================================
+   7. FAMILY NAMES AND THANK-YOU SECTION
+   Add or remove names in the THANKS object below.
+   ========================================================= */
+
+const THANKS = {
+  family: "Jain Family",
+
+  uncles: {
+    label: "RSVP",
+    names: ["Mukesh Jain", "Rakesh Jain", "Dharamvir Jain"]
+  },
+
+  hosts: {
+    label: "LOVINGLY INVITED BY",
+    names: ["Sanyam", "Raman", "Lavanya", "Bhavya", "Harshita", "Harshit", "Gautam"]
+  },
+
+  // Add a cousins section here if required:
+  // cousins: { label: "WITH LOVE FROM OUR COUSINS", names: ["Name 1", "Name 2"] },
+
+  firm: {
+    label: "WITH BEST COMPLIMENTS FROM",
+    name: ["Arhem Super Store", "Jain Medical Hall"]
+  }
 };
-const nameBlock=(b)=>b&&b.names&&b.names.length?`<div class="tg"><p class="small">${b.label}</p><div class="names">${b.names.map(n=>`<span>${n}</span>`).join("")}</div></div>`:"";
-$("thanksList").innerHTML=
-  `<div class="tg" style="margin-top:0"><p class="small">WITH LOVE</p><p class="big">${THANKS.family}</p></div>`+
-  nameBlock(THANKS.uncles)+nameBlock(THANKS.hosts)+nameBlock(THANKS.cousins)+
-  (THANKS.firm&&THANKS.firm.name?`<div class="tg"><p class="small">${THANKS.firm.label}</p><span class="firm">${THANKS.firm.name}</span></div>`:"");
-// ---------- RSVP (add as many names as you like) ----------
-/* ================= EDIT RSVP NAMES / NUMBERS HERE ================= */
-const RSVP={
-  by:"25th November 2026",
-  people:[
-    {name:"Mukesh Jain",     rel:"Groom's Father", phone:"+91 9992122932"},
-    {name:"Yogita Jain",rel:"Groom's Mother", phone:"+91 9728283945"},
-    {name:"Sanyam Jain",rel:"Groom's Brother",phone:"+91 9991480309"}
+
+function createNamesSection(section) {
+  if (!section?.names?.length) return "";
+
+  const names = section.names
+    .map((name) => `<span>${name}</span>`)
+    .join("");
+
+  return `
+    <div class="tg">
+      <p class="small">${section.label}</p>
+      <div class="names">${names}</div>
+    </div>
+  `;
+}
+
+function createBusinessSection(section) {
+  if (!section?.name?.length) return "";
+
+  const businesses = [].concat(section.name)
+    .map((name) => `<span class="firm">${name}</span>`)
+    .join("");
+
+  return `
+    <div class="tg">
+      <p class="small">${section.label}</p>
+      ${businesses}
+    </div>
+  `;
+}
+
+function renderThankYouNames() {
+  getElement("thanksList").innerHTML = [
+    createBusinessSection(THANKS.firm),
+    createNamesSection(THANKS.uncles),
+    createNamesSection(THANKS.hosts),
+    createNamesSection(THANKS.cousins)
+  ].join("");
+}
+
+
+/* =========================================================
+   8. RSVP CONTACT CARDS
+   Update names and phone numbers in the RSVP object.
+   ========================================================= */
+
+const RSVP = {
+  people: [
+    {
+      name: "Mukesh Jain",
+      relation: "Groom's Father",
+      phone: "+91 9992122932"
+    },
+    {
+      name: "Yogita Jain",
+      relation: "Groom's Mother",
+      phone: "+91 9728283945"
+    },
+    {
+      name: "Sanyam Jain",
+      relation: "Groom's Brother",
+      phone: "+91 9991480309"
+    }
   ]
 };
-$("rsvpMsg").textContent="Please confirm your presence by "+RSVP.by+". We would love to know you are coming.";
-$("rsvpList").innerHTML=RSVP.people.map(p=>{const d=p.phone.replace(/\D/g,""); return `
-  <div class="rc">
-    <span class="nm2">${p.name}</span>
-    <span class="rel">${p.rel}</span>
-    <span class="ph">${p.phone}</span>
-    <div class="acts"><a class="rb" href="tel:+${d}">📞 CALL</a><a class="rb wa" target="_blank" rel="noreferrer" href="https://wa.me/${d}?text=${encodeURIComponent("Hello "+p.name+", we will be attending the wedding celebrations. 🙏")}">WHATSAPP</a></div>
-  </div>`}).join("");
 
-// ---------- FLOWER SHOWER: runs on every page, starts immediately ----------
-/* optional images: images/falling-rose-petal.png, images/falling-daisy.png (fallbacks are drawn automatically) */
-(function(){
-  const kinds=[
-    s=>`<img src="images/falling-rose-petal.png" alt="" onerror="this.outerHTML='<span class=rp></span>'">`,
-    s=>`<img src="images/falling-daisy.png" alt="" onerror="this.outerHTML='<span style=font-size:${s*.8}px;line-height:1>🌼</span>'">`,
-    s=>`<span style="font-size:${s*.8}px;line-height:1">🌸</span>`,
-    s=>`<span style="font-size:${s*.8}px;line-height:1">🍃</span>`
-  ];
-  $("shower").innerHTML=Array.from({length:34},(_,i)=>{
-    const sz=20+Math.random()*26;
-    return `<div class="f" style="left:${Math.random()*100}%;width:${sz}px;height:${sz}px;animation-duration:${10+Math.random()*12}s;animation-delay:${-Math.random()*14}s">${kinds[i%4](sz)}</div>`;
-  }).join("");
-})();
+function createRsvpCard(person) {
+  const phoneDigits = person.phone.replace(/\D/g, "");
+  const message = encodeURIComponent(
+    `Hello ${person.name}, Congratulations! 🙏`
+  );
+
+  return `
+    <div class="rc">
+      <span class="nm2">${person.name}</span>
+      <span class="rel">${person.relation}</span>
+      <span class="ph">${person.phone}</span>
+
+      <div class="acts">
+        <a class="rb" href="tel:+${phoneDigits}">📞 CALL</a>
+        <a
+          class="rb wa"
+          target="_blank"
+          rel="noreferrer"
+          href="https://wa.me/${phoneDigits}?text=${message}">
+          WHATSAPP
+        </a>
+      </div>
+    </div>
+  `;
+}
+
+function renderRsvpContacts() {
+  getElement("rsvpList").innerHTML = RSVP.people
+    .map(createRsvpCard)
+    .join("");
+}
+
+
+/* =========================================================
+   9. FALLING FLOWERS
+   ========================================================= */
+
+function createFallingFlowerContent(index, size) {
+  switch (index % 4) {
+    case 0:
+      return `
+        <img
+          src="images/falling-rose-petal.png"
+          alt=""
+          onerror="this.outerHTML='<span class=rp></span>'">
+      `;
+
+    case 1:
+      return `
+        <img
+          src="images/falling-daisy.png"
+          alt=""
+          onerror="this.outerHTML='<span style=font-size:${size * 0.8}px;line-height:1>🌼</span>'">
+      `;
+
+    case 2:
+      return `<span style="font-size:${size * 0.8}px;line-height:1">🌸</span>`;
+
+    default:
+      return `<span style="font-size:${size * 0.8}px;line-height:1">🍃</span>`;
+  }
+}
+
+function createFallingFlower(index) {
+  const size = randomBetween(30, 64);
+  const left = randomBetween(0, 100);
+  const duration = randomBetween(9, 18);
+  const delay = randomBetween(-14, 0);
+
+  return `
+    <div
+      class="f"
+      style="
+        left:${left}%;
+        width:${size}px;
+        height:${size}px;
+        animation-duration:${duration}s;
+        animation-delay:${delay}s;
+      ">
+      ${createFallingFlowerContent(index, size)}
+    </div>
+  `;
+}
+
+function startFlowerShower() {
+  getElement("shower").innerHTML = repeatHtml(60, createFallingFlower);
+}
+
+
+/* =========================================================
+   10. START THE WEBSITE
+   ========================================================= */
+
+function initializeWebsite() {
+  setupEnvelope();
+  renderEvents();
+  renderPlaces();
+  renderThankYouNames();
+  renderRsvpContacts();
+  startFlowerShower();
+}
+
+initializeWebsite();
 </script>
 </body>
 </html>
