@@ -410,6 +410,61 @@ body{overflow-x:hidden;-webkit-text-size-adjust:100%}
   }
 }
 
+/* Make all event dates bold and prominent */
+.ev .glass .dt {
+  font-family: 'Cinzel', serif !important;
+  font-size: 27px !important;
+  font-weight: 900 !important;
+  color: #5c0f14 !important;
+  -webkit-text-stroke: 1px #5c0f14;
+  letter-spacing: 0.02em !important;
+  line-height: 1.4 !important;
+}
+
+/* Increase event schedule table text size */
+.ev .glass .times {
+  max-width: 100%;
+  font-size: 22px !important;
+  padding: 16px 20px !important;
+}
+
+.ev .glass .times p {
+  font-size: 22px !important;
+  line-height: 1.6 !important;
+  gap: 12px !important;
+}
+
+.ev .glass .times p span,
+.ev .glass .times p b {
+  font-size: 22px !important;
+  font-weight: 700 !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 699px) {
+  .ev .glass .dt {
+    font-size: 27px !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 1px #5c0f14;
+  }
+
+  .ev .glass .times {
+    padding: 16px 14px !important;
+  }
+
+  .ev .glass .times p {
+    font-size: 20px !important;
+    line-height: 1.7 !important;
+    gap: 8px !important;
+  }
+
+  .ev .glass .times p span,
+  .ev .glass .times p b {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+  }
+}
+
 
 </style>
 </head>
@@ -1054,18 +1109,13 @@ function createEventCard(event) {
     : `At ${place?.title || ""}`;
 
   const eventDate = event.date
-    ? `<p class="dt" style="color:#5c0f14;font-size:20px;font-weight:700;text-shadow:0 1px 0 #ffffff99">${event.date}</p>`
+    ? `<p class="dt"> ${event.date}</p>`
     : "";
 
   const eventTime = event.time
     ? `
       <span
-        class="pill"
-        style="
-          color:${event.pillColor};
-          background:${event.pillBackground};
-          border-color:${event.pillBorder};
-        ">
+        class="pill">
         ${event.time}
       </span>
     `
