@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Wedding Invitation</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
 <style>
 /*
   Put images in a folder named "images" next to this file:
@@ -365,6 +365,49 @@ body{overflow-x:hidden;-webkit-text-size-adjust:100%}
 .place .adr b,
 .place .lab {
   font-weight: 700 !important;
+}
+
+
+/* Bolder dates on every event card */
+.glass p.dt {
+  font-family: 'Cinzel', serif !important;
+  font-size: 23px !important;
+  font-weight: 900 !important;
+  color: #5c0f14 !important;
+  -webkit-text-stroke: 0.6px #5c0f14;
+  text-shadow: none !important;
+  letter-spacing: 0.03em !important;
+  line-height: 1.5 !important;
+}
+
+/* Extra emphasis on mobile */
+@media (max-width: 699px) {
+  .glass p.dt {
+    font-size: 24px !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.8px #5c0f14;
+    padding: 5px 10px;
+    background: #fff8e8;
+    border: 1px solid #c28b3a;
+    border-radius: 10px;
+  }
+}
+
+/* Bold every event schedule entry */
+.glass .times p span,
+.glass .times p b {
+  font-weight: 800 !important;
+}
+
+.glass .times p b {
+  color: #5c0f14 !important;
+}
+
+@media (max-width: 699px) {
+  .glass .times p span,
+  .glass .times p b {
+    font-weight: 900 !important;
+  }
 }
 
 
