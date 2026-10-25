@@ -296,6 +296,35 @@ body{overflow-x:hidden;-webkit-text-size-adjust:100%}
 .rc .ph{font-size:13px;margin-top:6px}
 .rc .acts{margin-top:10px;gap:6px}
 .rb{padding:6px 12px;font-size:10px}
+
+/* Make event dates bold and clear on mobile */
+.glass .dt {
+  font-family: 'Cinzel', serif !important;
+  font-size: 22px !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.04em !important;
+  line-height: 1.5 !important;
+  color: #5c0f14 !important;
+  text-shadow: 0 1px 0 #ffffff, 0 0 2px #ffffff !important;
+  -webkit-text-stroke: 0.35px currentColor;
+}
+
+/* Improve readability on phones */
+@media (max-width: 699px) {
+  .glass .dt {
+    font-size: 23px !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.02em !important;
+    line-height: 1.6 !important;
+    padding: 5px 10px;
+    background: #fff8e8ed;
+    border: 1px solid #c28b3a;
+    border-radius: 10px;
+    text-shadow: none !important;
+    -webkit-text-stroke: 0.4px currentColor;
+  }
+}
+
 </style>
 </head>
 <body>
