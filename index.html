@@ -464,7 +464,113 @@ body{overflow-x:hidden;-webkit-text-size-adjust:100%}
     font-weight: 700 !important;
   }
 }
+/* ---------- EVENT DATE BADGE (identical on every card) ---------- */
+.ev .glass .date-badge{
+  display:flex;flex-direction:column;align-items:center;gap:2px;
+  margin-top:14px;padding:10px 22px;max-width:100%;
+  background:#fff8e8;border:1.5px solid #c28b3a;border-radius:14px;
+  box-shadow:0 6px 18px -8px #5c0f1480;text-align:center;
+  font-family:'Cinzel',serif;color:#5c0f14;
+}
+.ev .glass .date-badge .db-date{font-size:22px;font-weight:800;letter-spacing:.03em;line-height:1.3}
+.ev .glass .date-badge .db-time{font-size:17px;font-weight:700;letter-spacing:.08em;color:#7a1426}
 
+@media (max-width:699px){
+  .ev .glass .date-badge{width:100%;padding:10px 12px}
+  .ev .glass .date-badge .db-date{font-size:21px}
+  .ev .glass .date-badge .db-time{font-size:16px}
+}
+
+/* ---------- TIME COLOUR = DATE COLOUR ---------- */
+.ev .glass .date-badge .db-date,
+.ev .glass .date-badge .db-time{color:#5c0f14}
+
+/* ---------- LARGER EVENT NAMES ---------- */
+.ev .glass h2{
+  font-size:clamp(26px,6.5vw,36px);
+  line-height:1.3;
+  text-align:center;
+}
+@media (max-width:699px){
+  .ev .glass h2{
+    font-size:clamp(22px,6.6vw,29px);
+    letter-spacing:.06em;
+  }
+}
+
+/* ---------- BOLDER WEDDING TABLE ---------- */
+.ev.wedding .glass .times p span,
+.ev.wedding .glass .times p b{
+  font-weight:900 !important;
+  color:#5c0f14 !important;
+  font-size:24px !important;
+  letter-spacing:.01em;
+}
+
+/* ================= WEDDING TABLE: aligned rows ================= */
+/* activity on the left, time on the right, always on the same line */
+.ev.wedding .glass .times{max-width:420px;padding:16px 18px !important}
+.ev.wedding .glass .times p{
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) auto;
+  column-gap:12px !important;
+  row-gap:0 !important;
+  align-items:baseline;
+  font-size:24px !important;
+  line-height:1.5 !important;
+}
+.ev.wedding .glass .times p span{font-size:24px !important;text-align:left}
+.ev.wedding .glass .times p b{font-size:24px !important;text-align:right}
+
+@media (max-width:699px){
+  .ev.wedding .glass .times{padding:12px 12px !important}
+  .ev.wedding .glass .times p{column-gap:8px !important}
+  .ev.wedding .glass .times p,
+  .ev.wedding .glass .times p span,
+  .ev.wedding .glass .times p b{font-size:17px !important;line-height:1.55 !important}
+}
+
+/* ================= CLEARER TEXT ABOVE THE DATE (all events) ================= */
+/* stronger frosted panel so the text stands out from the picture */
+.ev .glass{background:#fff8e8bd !important;border-color:#ffffffb3 !important}
+
+/* dark, readable colour for each event */
+.ev.haldi   .glass{color:#7c2d12 !important}
+.ev.mehndi  .glass{color:#064e3b !important}
+.ev.sangeet .glass{color:#47296b !important}
+.ev.wedding .glass{color:#5c0f14 !important}
+
+/* "PLEASE JOIN US FOR ..." */
+.ev .glass h3{
+  font-size:13px;font-weight:700;letter-spacing:.14em;
+  opacity:1 !important;color:inherit;
+  text-shadow:0 1px 0 #ffffffcc;
+}
+/* the italic line under it */
+.ev .glass .l{
+  font-size:21px;font-weight:600;line-height:1.35;
+  color:inherit !important;
+  text-shadow:0 1px 0 #ffffffcc;
+}
+
+@media (max-width:699px){
+  .ev .glass h3{font-size:12px;letter-spacing:.08em}
+  .ev .glass .l{font-size:18px}
+}
+/* ---------- HOSTS LINE: one line, bold, no box ---------- */
+.hosts{
+  display:block;
+  max-width:100%;
+  margin:18px 0 2px;
+  white-space:nowrap;                      /* stays on ONE line */
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(20px,4.7vw,24px);        /* shrinks on small phones so it still fits */
+  font-weight:800;
+  color:#3d0a10;
+  text-shadow:0 1px 0 #fff;
+  text-align:center;
+}
+.inv{margin-top:6px}
 
 </style>
 </head>
@@ -522,8 +628,8 @@ body{overflow-x:hidden;-webkit-text-size-adjust:100%}
       <!----<small>Mangalam Bhagwan Vishnu · Mangalam Garudadhwajah<br>Mangalam Pundarikakshah · Mangalaya Tano Harih</small> ---->
     </div>
 
-    <p class="inv" style="animation-delay:.7s">Smt. Shanti Devi and Sh. Mange Ram Jain solicit your gracious presence and blessings on the auspicious occasion of the wedding celebration of their beloved grandson</p>
-
+<p class="hosts" style="animation-delay:.7s">Smt. Shanti Devi and Sh. Mange Ram Jain</p>
+<p class="inv" style="animation-delay:.8s">solicit your gracious presence and blessings on the auspicious occasion of the wedding celebration of their beloved grandson</p>
     <div class="nm" style="animation-delay:.9s">Piyush</div>
     <p class="par" style="animation-delay:1.1s">S/o Mrs. Yogita &amp; Mr. Mukesh Jain<!---<em>Grandson of Mr. Mange Ram Jain &amp; Mrs. Shanti Devi</em>----></p>
     <div class="weds" style="animation-delay:1.2s">weds</div>
@@ -894,7 +1000,7 @@ const PLACES = {
     label: "RESIDENCE",
     title: "Shanti Complex",
     when: "Haldi · Mehndi · Sangeet  |  3rd – 4th December 2026",
-    address: "136 M. C. Colony,Hisar",
+    address: "137 M. C. Colony,Hisar",
     side: "",
     link: ""
   },
@@ -1108,17 +1214,13 @@ function createEventCard(event) {
     ? "At our residence"
     : `At ${place?.title || ""}`;
 
-  const eventDate = event.date
-    ? `<p class="dt"> ${event.date}</p>`
-    : "";
-
-  const eventTime = event.time
-    ? `
-      <span
-        class="pill">
-        ${event.time}
-      </span>
-    `
+  // Same badge on every card: "3rd December 2026 | 10:00 AM" -> date on line 1, time on line 2
+  const [datePart, timePart] = (event.time || event.date || "").split(" | ");
+  const eventDate = datePart
+    ? `<div class="date-badge">
+         <span class="db-date">${datePart}</span>
+         ${timePart ? `<span class="db-time">${timePart}</span>` : ""}
+       </div>`
     : "";
 
   const locationLink = place
@@ -1178,7 +1280,6 @@ function createEventCard(event) {
 
         ${eventDate}
         ${createEventSchedule(event.schedule)}
-        ${eventTime}
         ${locationLink}
       </div>
 
