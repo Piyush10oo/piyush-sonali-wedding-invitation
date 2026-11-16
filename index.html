@@ -858,14 +858,42 @@ const WEDDING_DATE = "2026-12-05T00:00:00+05:30";
 
 let countdownInterval = null;
 
+
 function updateCountdown() {
+  const now = new Date();
+
+  // Get current date and time in Indian Standard Time
+  const istDate = new Date(
+    now.toLocaleString("en-US", {
+      timeZone: "Asia/Kolkata"
+    })
+  );
+
+  // Calculate today's midnight
+  const today = new Date(
+    istDate.getFullYear(),
+    istDate.getMonth(),
+    istDate.getDate()
+  );
+  
+
+  // Wedding date: 5 December 2026
+  const weddingDay = new Date(2026, 11, 5);
+
+  // Calendar days remaining
+  const daysRemaining = Math.max(
+    0,
+    Math.round((weddingDay - today) / 86400000)
+  );
+
+  // Actual remaining time until wedding
   const remainingMs = Math.max(
     0,
-    new Date(WEDDING_DATE).getTime() - Date.now()
+    new Date(WEDDING_DATE).getTime() - now.getTime()
   );
 
   const countdownValues = [
-    [Math.floor(remainingMs / 86400000), "Days"],
+    [daysRemaining, "Days"],
     [Math.floor((remainingMs / 3600000) % 24), "Hours"],
     [Math.floor((remainingMs / 60000) % 60), "Minutes"],
     [Math.floor((remainingMs / 1000) % 60), "Seconds"]
@@ -879,6 +907,7 @@ function updateCountdown() {
       </div>
     `)
     .join("");
+
 }
 
 function drawScratchCover(canvas, context, width, height) {
